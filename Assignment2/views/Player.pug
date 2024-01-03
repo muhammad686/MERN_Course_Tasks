@@ -1,0 +1,29 @@
+//- Include header
+include partials/header
+
+form(action="/submitPlayerName", method="POST")
+  input(type="text", name="playerName", class="inputName", placeholder="Player Name")
+  input(type="submit", class="inputNameButton", value="Search")
+
+if locals.data && data.length > 0
+  each player in data
+    div.col.container
+      div.card.mb-4.rounded-3.shadow-sm
+        div.card-body
+          h2.card-title.pricing-card-title
+            |  Name : 
+            strong= player.name
+          h2.card-title.pricing-card-title
+            |  Country : 
+            strong= player.country
+          h2.card-title.pricing-card-title
+            |  Player ID : 
+            strong= player.id
+         
+              
+
+else
+  h2= locals.error
+
+//- Include footer
+include partials/footer

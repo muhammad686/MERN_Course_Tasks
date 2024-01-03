@@ -1,0 +1,25 @@
+include partials/header
+
+if locals.scoreData
+  each Score in scoreData
+    .col.container
+      .card.mb-4.rounded-3.shadow-sm
+        .card-header.py-3.matchName
+          h1.my-0.fw-normal.matchName
+            |#{Score.t1} vs #{Score.t2}
+        .card-body
+          h2.card-title.pricing-card-title
+            |Match Type          :   
+            strong= Score.matchType 
+          h2.card-title.pricing-card-title
+            |#{Score.t1} Score    :  
+            strong= Score.t1s
+          h2.card-title.pricing-card-title
+            |#{Score.t2} Score     :
+            strong= Score.t2s
+          h2.card-title.pricing-card-title
+            |Status                :
+            strong= Score.status
+
+
+include partials/footer

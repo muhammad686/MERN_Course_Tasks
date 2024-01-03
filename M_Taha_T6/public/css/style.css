@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  background: whitesmoke;
+  width: 500px;
+  padding: 25px;
+  margin: 15px auto 0;
+  box-shadow: 5px 5px 5px 5px rgb(0, 0, 0, 0.5);
+}
+.container h2 {
+  font-size: 25px;
+  line-height: 25px;
+  padding-bottom: 30px;
+  text-align: center;
+  color: blue;
+}
+.container h2:hover {
+  color: green;
+}
+.input-name {
+  width: 90%;
+  position: relative;
+  margin: 20px auto;
+}
+.lock {
+  padding: 7px 10px;
+}
+.email {
+  padding: 7px 7px;
+}
+.fn,
+.ln {
+  padding: 7px 10px;
+}
+.gen {
+  padding: 7px 10px;
+}
+.name {
+  width: 45%;
+  padding: 8px 0px 8px 40px;
+}
+.input-name span {
+  margin-left: 35px;
+}
+.text-name {
+  width: 100%;
+  padding: 8px 0 8px 40px;
+}
+.input-name i {
+  position: absolute;
+  font-size: 18px;
+  color: blue;
+  border-right: 1px solid rgb(0, 0, 0, 0.5);
+}
+.text-name,
+.name {
+  border: 1px solid #cccccc;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.text-name:hover,
+.name:hover {
+  background-color: aliceblue;
+}
+.text-name:focus,
+.name:focus {
+  border: 1px solid blue;
+}
+.radio-btn {
+  margin: 4px;
+}
+.gender {
+  margin-right: 30px;
+}
+
+.check {
+  margin-right: 15px;
+  position: relative;
+}
+.check::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  vertical-align: -2px;
+  border: 2px solid #cccccc;
+  padding: 2.5px;
+  background-color: transparent;
+  background-clip: content-box;
+  transition: all 0.2s ease;
+}
+.check::after {
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  content: "";
+  height: 20px;
+  left: 2px;
+  position: absolute;
+  top: 7px;
+  transform: scaleX(-1) rotate(135deg);
+  transform-origin: left top;
+  display: none;
+}
+.check-button {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  width: 1px;
+}
+.check-button:hover + .check::before {
+  border-color: blue;
+}
+.check-button:checked + .check::before {
+  border-color: green;
+}
+.check-button:checked + .check::after {
+  -moz-animation: check 0.2s ease 0s running;
+  -webkit-animation: check 0.2s ease 0s running;
+  animation: check 0.2s ease 0s running;
+  display: block;
+  width: 7px;
+  height: 16px;
+  border-color: green;
+}
+@keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  25% {
+    height: 0;
+    width: 7px;
+  }
+  50% {
+    height: 16px;
+    width: 7px;
+  }
+}
+.button {
+  background-color: blue;
+  color: whitesmoke;
+  height: 35px;
+  line-height: 35px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.button:hover {
+  background-color: green;
+}
+@media (max-width: 400px) {
+  .container {
+    width: 100%;
+    padding: 5px;
+  }
+  .input-name {
+    margin-bottom: -10px;
+  }
+  .input-name span {
+    padding: 0;
+    margin: 0;
+  }
+  .name {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+}
+
+/* Add these styles to your existing stylesheet or create a new one */
+.styled-table {
+  width: 60%;
+  border-collapse: collapse;
+  /* margin-top: 20px; Add spacing if needed */
+  padding: 25px;
+  margin: 25px auto 0;
+}
+
+.styled-table th,
+.styled-table td {
+  border: none;
+  padding: 8px;
+  text-align: center;
+}
+
+.styled-table th {
+  background-color: blue;
+  color: white;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* .styled-table tr:hover {
+  background-color: green;
+} */

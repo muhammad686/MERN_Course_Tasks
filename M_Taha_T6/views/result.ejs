@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+
+    <!-- Add these lines before the closing </body> tag -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Add icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css"
+    />
+    <link rel="stylesheet" href="../public/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <table class="styled-table">
+        <tr>
+          <th>Name</th>
+          <th>Semester</th>
+          <th>Degree</th>
+          <th>Action</th>
+        </tr>
+
+        <% if (locals.data){%> <% for (var student of data){ %>
+        <tr>
+          <td><%= student.name %></td>
+          <td><%= student.semester %></td>
+          <td><%= student.program %></td>
+          <td>
+            <form
+              action="/edit-student/<%= student.id %>"
+              method="get"
+              style="display: inline"
+            >
+              <button type="submit" class="btn btn-success btn-sm">Edit</button>
+            </form>
+            <form
+              action="/delete-student/<%= student.id %>"
+              method="post"
+              style="display: inline"
+            >
+              <input type="hidden" name="_method" value="delete" />
+              <button type="submit" class="btn btn-danger btn-sm">
+                Delete
+              </button>
+            </form>
+          </td>
+        </tr>
+        <% if (locals.msg){ %>
+        <tr>
+          <%= msg %>
+        </tr>
+        <% } %> <% } %> <% } %>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <a href="/add" class="btn btn-primary">Add student</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

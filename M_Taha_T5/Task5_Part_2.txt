@@ -1,0 +1,49 @@
+College_Management_System
+
+use College_Management_System
+
+switched to db College_Management_System
+
+db.createCollection("student")
+db.createCollection("Department")
+db.createCollection("courses")
+db.createCollection("Hostel")
+db.createCollection("Faculty")
+
+db.student.insert({
+    RegNo: "1234242",
+    Name: "taha",
+    Gender: "male",
+    Hostel_No: 8,
+    department: "CS",
+    Degree: "BS",
+    semester: 9,
+})
+
+db.Hostel.insertOne({
+    RegNo: "1234242",
+    Name: "taha",
+    Hostel_No: 8,
+    room_no: 56,
+    department: "CS",
+    Degree: "BS",
+    semester: 9,
+})
+
+db.Department.insertOne({
+    RegNo: "1234242",
+    Name: "taha",
+    department: "CS",
+    Degree: "BS",
+    semester: 9,
+
+})
+db.courses.insertOne({
+    RegNo: "0407182",
+    Subject1: "PHY",
+    Subject2: "MATH",
+    Subject3: "CHE",
+})
+
+
+

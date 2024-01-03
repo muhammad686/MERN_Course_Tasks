@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Form</title>
+  </head>
+  <body>
+    <h1>Enter your Credentials 📁</h1>
+
+    <form action="/submit" method="POST">
+      <label for="name"> Name</label>
+      <input type="text" placeholder="Name" name="name" required />
+      <label for="email"> Email</label>
+      <input type="email" placeholder="Email" name="email" required />
+      <label for="age"> Age</label>
+      <input type="number" placeholder="Age" name="age" required />
+      <label for="contact"> Contact</label>
+      <input type="number" placeholder="Contact" name="contact" required />
+      <label for="qualification">Qualification</label>
+      <select name="qualification" required>
+        <option value="High School">High School</option>
+        <option value="Undergraduate">Undergraduate</option>
+        <option value="Graduate">Graduate</option>
+        <option value="Postgraduate">Postgraduate</option>
+      </select>
+      <input type="submit" value="Create My CV" />
+    </form>
+
+    <div class="create_my_cv">
+      <h3><%= userName %></h3>
+      <h3><%= userEmail %></h3>
+      <h3><%= userAge %> years old</h3>
+      <h3><%= userContact %></h3>
+      <h3><%= userQualification %></h3>
+    </div>
+  </body>
+</html>

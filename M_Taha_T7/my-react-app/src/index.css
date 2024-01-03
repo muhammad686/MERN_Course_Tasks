@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+.Header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(147, 147, 244);
+  background-clip: padding-box;
+  padding: 5px 10px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-nav {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+  justify-content: flex-end;
+  margin-left: 72%;
+}
+
+.header-links {
+  margin-left: 30px;
+  cursor: pointer;
+  font-weight: lighter;
+}
+
+@media (max-width: 768px) {
+  .Header-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-nav {
+    margin-top: 10px;
+  }
+
+  .header-links {
+    margin: 0;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+}
+
+/* HomePage */
+.Main-section {
+  padding: 20px;
+  background-image: url("./qauimgback.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  opacity: 0.8;
+}
+
+.heading {
+  font-size: 8rem;
+  padding: 10% auto 0;
+  margin: 10px auto 0;
+  color: white;
+}
+.para {
+  font-size: 3rem;
+  padding-top: 15%;
+  margin: 0% auto 0;
+  background: linear-gradient(60deg, white, whitesmoke, black);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-clip: padding-box;
+  background: linear-gradient(90deg, rgb(147, 147, 244), white);
+}
+
+.about-section h1 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+  color: black;
+  padding: 0px;
+}
+.about-section .about-para {
+  font-size: 2rem;
+  padding: 10% auto 0;
+  margin: 0% auto 0;
+  opacity: 0.9;
+}
+/* Departments */
+.dept-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-clip: padding-box;
+  background: linear-gradient(90deg, white, rgb(147, 147, 244));
+  padding-top: 10px;
+}
+.dept-heading {
+  font-size: 3rem;
+  color: black;
+  padding: 0px;
+}
+.dept-main-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.field-domains {
+  box-shadow: 3px 0 3px 3px rgba(0, 0, 0, 0.5);
+  padding-top: 10px;
+}
+ul {
+  list-style-type: none;
+  text-align: left;
+}
+li {
+  padding: 1px 20px;
+}
+/* footor section */
+.Footer-section {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  background-color: rgb(147, 147, 244);
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+}
+
+.footer-links {
+  margin-left: 20px;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.developer {
+  margin-top: 10px;
+  font-size: 14px;
+}

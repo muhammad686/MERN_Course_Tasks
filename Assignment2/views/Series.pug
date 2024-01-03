@@ -1,0 +1,33 @@
+//- Include header
+include partials/header
+
+if locals.data1
+  each Series in data1
+    div.col.container
+      div.card.mb-4.rounded-3.shadow-sm
+        div.card-header.py-3.matchName
+          h1.my-0.fw-normal.matchName= Series.name
+        div.card-body
+          h2.card-title.pricing-card-title
+            | Start Date:
+            strong= Series.startDate
+          h2.card-title.pricing-card-title
+            | End Date:
+            strong= Series.endDate
+          h2.card-title.pricing-card-title
+            | ODI's:
+            strong= Series.odi
+          h2.card-title.pricing-card-title
+            | T20's:
+            strong= Series.t20
+          h2.card-title.pricing-card-title
+            | Test:
+            strong= Series.test
+          h2.card-title.pricing-card-title
+            | Squads:
+            strong= Series.squads
+          h2.card-title.pricing-card-title
+            | Matches:
+            strong= Series.matches
+
+include partials/footer

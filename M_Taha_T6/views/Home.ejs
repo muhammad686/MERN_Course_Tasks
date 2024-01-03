@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homepage</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width = device-width, initial-scale=1" />
+    <!-- Add this line to include Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+
+    <!-- Add these lines before the closing </body> tag -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Add icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css"
+    />
+    <link rel="stylesheet" href="../public/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Add student</h2>
+      <div class="form-container">
+        <form action="/add" method="POST">
+          <div class="input-name">
+            <i class="fa fa-user email"></i>
+            <input
+              type="teext"
+              placeholder="Full Name"
+              class="text-name"
+              name="fullname"
+              required
+            />
+          </div>
+
+          <div class="input-name">
+            <i class="fa fa-envelope email"></i>
+            <input
+              type="text"
+              placeholder="Semester"
+              class="text-name"
+              pattern="^(?:[1-9]|1[0-2])$"
+              name="Semester"
+              required
+            />
+          </div>
+
+          <div class="input-name">
+            <i class="fa fa-lock lock" aria-hidden="true"></i>
+            <input
+              type="text"
+              placeholder="Program"
+              class="text-name"
+              name="Degree"
+              required
+            />
+          </div>
+
+          <div class="input-name">
+            <input type="submit" class="button" name="submit" value="submit" />
+          </div>
+
+          <% if (locals.msg){ %>
+          <p><%= msg %></p>
+          <% } %>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

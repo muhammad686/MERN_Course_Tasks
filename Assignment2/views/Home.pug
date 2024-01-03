@@ -1,0 +1,27 @@
+include partials/header
+
+if locals.matches
+  each match in matches
+    div.container
+      div.col
+        div.card.mb-4.rounded-3.shadow-sm
+          div.card-header.py-3.matchName
+            h1.my-0.fw-normal.matchName= match.name
+          div.card-body
+            h2.card-title.pricing-card-title
+              |Match Type:
+              strong= match.matchType
+            h2.card-title.pricing-card-title
+              |Match Status:
+              strong= match.status
+            h2.card-title.pricing-card-title
+              |Match Venue:
+              strong= match.venue
+            h2.card-title.pricing-card-title
+              |Match Date:
+              strong= match.date
+            h2.card-title.pricing-card-title
+              |Match Time GMT:
+              strong= match.dateTimeGMT
+
+include partials/footer

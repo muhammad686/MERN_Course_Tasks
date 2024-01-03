@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="style.css")
+    title CV Form
+  body
+    h1(id="main-heading") Custom CV Generator 
+    
+  div(class="container")
+    form(action="/submit" method="POST" class="cv-form")
+      label(for="name" class="inp") Name
+      input(type="text" class="field" placeholder="Enter Full Name" name="name" required)
+      br
+      label(for="email" class="inp") Email
+      input(type="email" class="field" placeholder="Enter Email" name="email" required)
+      br
+      label(for="age" class="inp") Age
+      input(type="digit" class="field" placeholder="Enter Age in year" name="age" required)
+      br
+      label(for="contact" class="inp") Contact
+      input(type="digit" class="field" placeholder="Enter Contact" name="contact" required)
+      br
+      label(for="qualification" class="inp") Qualification
+      select(name="qualification" class="field" required)
+        option(value="Enter Qual")
+        option(value="High School") High School
+        option(value="Undergraduate") Undergraduate
+        option(value="Graduate") Graduate
+        option(value="Postgraduate") Postgraduate
+      br
+      input(type="submit" value="Create My CV" class="btn")
+     
+    div(class="create_my_cv")
+      h3(class="headers-q") Name:
+      h3(class="headers-a") #{userName}
+      h3(class="headers-q") Email:
+      h3(class="headers-a") #{userEmail}
+      h3(class="headers-q") Age:
+      h3(class="headers-a") #{userAge} years old
+      h3(class="headers-q") Contact:
+      h3(class="headers-a")  #{userContact}
+      h3(class="headers-q") Qualification:
+      h3(class="headers-a") #{userQualification}
+

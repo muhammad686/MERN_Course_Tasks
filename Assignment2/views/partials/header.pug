@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp", crossorigin="anonymous")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css")
+    link(rel="stylesheet", href="/styles/layout.css")
+    link(rel="stylesheet", href="/styles/content.css")
+    title Cricketify
+  header
+    nav.navbar.navbar-expand-custom.navbar-mainbg
+      a.navbar-brand.navbar-logo(href="#") Cricketify
+      button.navbar-toggler(type="button", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
+        i.fas.fa-bars.text-white
+      div.collapse.navbar-collapse(id="navbarSupportedContent")
+        ul.navbar-nav.ml-auto
+          div.hori-selector
+            div.left
+          li.nav-item
+            a.nav-link(href="/")
+              i.far.fa-home Home
+          li.nav-item
+            a.nav-link(href="/Scored")
+              i.far Score Board
+          li.nav-item
+            a.nav-link(href="/Series")
+              i.fas.fa-information Sereis
+          li.nav-item
+            a.nav-link(href="/Teams")
+              i.fas.fa-teams Cricket Teams
+          li.nav-item
+            a.nav-link(href="/Player")
+              i.fas.fa-search Search Player
+  main.container

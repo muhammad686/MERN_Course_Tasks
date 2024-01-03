@@ -1,0 +1,32 @@
+Node B: i am fine
+Node B: "How are You"
+Node B: Taha
+Node B: Taha
+Node B: jklm
+Node B: "How are You"
+Node B: I am fine
+Node B: I am fine
+Node B: ok
+Node B: chena ju
+Node B: chena ju
+Node B: chena ju
+Node B: chena ju
+Node B: Hi, Taha How are You
+Node B: Hi, Taha How are You
+Node B: Hi,Taha
+Node B: Hi,Taha
+Node B: Hi, Taha
+Node B: Hi, Taha
+Node B Says: ley
+Node B Says: ley
+Node B Says: Taha
+Node B Says: Taha
+Node B: i am fine
+Node B: i am fine
+Node B: hello
+Node B: Hi, This is Nasir
+Node B: Hi, This is Nasir
+Node B says: Hey, what happen
+Node B says: Hey, what happen
+Node B says: Okay Taha that's fine
+Node B says: Okay Taha that's fine
