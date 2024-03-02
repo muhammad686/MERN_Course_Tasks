@@ -1,0 +1,88 @@
+sterp 1 :Create a database named your_name_database. 
+    $ use Muhammad_Taha
+
+step 2: In the database, create a collection named personals_collection
+    $ db.createCollection("PersonalCollection")
+    
+step 3: Inside the collection (personals_collection), add 5 documents holding records of 5 students. a. Registration number b. Name c. City name 
+    $ db.PersonalCollection.insertMany([ {
+          RegNo: "04071913018",
+          Name: "Taha",
+          CityName: "Islamabad",
+        },
+        {
+          RegNo: "04071913019",
+          Name: "Maha",
+          CityName: "Rawalpindi",
+        },
+        {
+          RegNo: "04071913020",
+          Name: "Raza",
+          CityName: "Lahore",
+        },
+        {
+          RegNo: "04071913021",
+          Name: "Insa",
+          CityName: "Multan",
+        },
+        {
+          RegNo: "04071913022",
+          Name: "Theta",
+          CityName: "Quetta",
+        }])
+
+step 4: Create a collection "Academics"
+    db.createCollection("Academics)
+
+step 5: Inside the collection (academics_collection), add 5 documents holding records of the same 5 students as above. 
+    $ db.Academics.insertMany([
+    {
+        RegNo: "04071913018",
+        DegreeEnrolled: "BSCS",
+        EnrollmentYear: 2019,
+        FavoriteCourse: "WAF",
+      },
+      {
+        RegNo: "04071913019",
+        DegreeEnrolled: "BSIT",
+        EnrollmentYear: 2019,
+        FavoriteCourse: "WAD",
+      },
+      {
+        RegNo: "04071913020",
+        DegreeEnrolled: "BSCS",
+        EnrollmentYear: 2019,
+        FavoriteCourse: "NLP",
+      },
+      {
+        RegNo: "04071913021",
+        DegreeEnrolled: "BSCS",
+        EnrollmentYear: 2019,
+        FavoriteCourse: "ML",
+      },
+      {
+        RegNo: "04071913022",
+        DegreeEnrolled: "BSCS",
+        EnrollmentYear: 2019,
+        FavoriteCourse: "DSA",
+      }])
+
+step 6: Now read all records from Academics and print.
+    $ db.Academics.find()
+    $ db.PersonalCollection.find()
+
+step 7: Read and display the names of the students who are from Rawalpindi. 
+    $ db.PersonalCollection.find({"CityName": "Rawalpindi"})
+
+step 8: Read and display the names of the students who got enrolled in 2019.
+    $ db.Academics.find({"EnrollmentYear":2019})
+
+step 9: Update the city name as “Rawalpindi/Islamabad” wherever it’s “Rawalpindi” or “Islamabad”. 
+    $ db.PersonalCollection.updateMany(
+    { "CityName": { $in: ["Rawalpindi", "Islamabad"] } },
+    { $set: { "CityName": "Rawalpindi/Islamabad" } })
+
+step 10: Delete the documents of those students from both collections who enrolled before 2019. 
+    $ db.PersonalCollection.updateMany(
+    { "CityName": { $in: ["Rawalpindi", "Islamabad"] } },
+    { $set: { "CityName": "Rawalpindi/Islamabad" } })

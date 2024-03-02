@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+}
+#main-heading {
+  text-align: center;
+  line-height: 5vh;
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+.cv-form {
+  width: 30%;
+  padding: 15px;
+  margin-left: 15%;
+  border: 2px solid black;
+  border-radius: 5%;
+  border-color: yellowgreen;
+  padding-left: 30px;
+}
+
+.inp {
+  display: block;
+  width: 30px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.field {
+  width: 95%;
+  padding: 8px;
+  border: none;
+  margin-bottom: 10px;
+  border-bottom: 3px solid rgb(22, 109, 214);
+  box-sizing: 5px;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  margin-top: 10px;
+  width: 95%;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1rem;
+  background-color: greenyellow;
+  border: none;
+  color: black;
+}
+
+.create_my_cv {
+  width: 30%;
+  padding: 15px;
+  border: 2px solid yellowgreen;
+  position: relative;
+  left: 5%;
+  top: 0%;
+  border-radius: 5%;
+  align-items: center;
+  justify-content: center;
+}
+
+.headers-q {
+  color: black;
+  padding: 0;
+  margin: 15px 5px;
+}
+.headers-a {
+  color: blueviolet;
+  padding: 0;
+  margin: 15px 5px;
+  border-bottom: 3px solid greenyellow;
+}
